@@ -6,7 +6,7 @@ import Spring.Interfaces.QuestInterface;
 public class Knight implements KnightInterface {
 	private QuestInterface quest;
 
-	Knight(QuestInterface quest) {
+	public Knight(QuestInterface quest) {
 		this.quest = quest;
 	}
 

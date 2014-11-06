@@ -1,15 +1,20 @@
 package Test.Test1;
+import static org.mockito.Mockito.*;
 
-import Spring.Classes.Quest1;
+import org.junit.Test;
+
+import Spring.Classes.Knight;
+import Spring.Interfaces.QuestInterface;
 
 public class TestKnigh {
 
-	Quest1 mockQuest = mock(Quest1.class);
-
-	private Quest1 mock(Class<Quest1> class1) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	@Test
+	 public void knightShouldEmbarkQuest() {
+	  QuestInterface mockQuest = mock(QuestInterface.class);
+	  Knight knight = new Knight(mockQuest);
+	  knight.embarkOnQuest();
+	  verify(mockQuest, times(1)).embark();
+	 }
 
 	
 	}
